@@ -17,6 +17,7 @@ function SEO ({description, lang, meta, keywords, title, image}) {
 
         return (
           <Helmet
+            
             htmlAttributes={{lang}}
             title={title}
             titleTemplate={title === siteTitle ? '%s' : `%s | ${siteTitle}`}
@@ -67,7 +68,24 @@ function SEO ({description, lang, meta, keywords, title, image}) {
                   : []
               )
               .concat(meta)}
-          />
+          >
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"></link>
+            {/* <!-- jQuery --> */}
+            <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+            <script type="text/javascript" src="js/jquery.min.js"></script>
+            {/* <!-- Bootstrap tooltips --> */}
+            <script type="text/javascript" src="js/popper.min.js"></script>
+            {/* <!-- Bootstrap core JavaScript --> */}
+            <script type="text/javascript" src="js/bootstrap.min.js"></script>
+            {/* <!-- MDB core JavaScript --> */}
+            <script type="text/javascript" src="js/mdb.min.js"></script>
+            {/* <!-- mojs lib  --> */}
+            <script type="text/javascript" src="js/mo.min.js"></script>
+            {/* <!-- animate scroll  --> */}
+            <script type="text/javascript" src="js/animatescroll.min.js"></script>
+            {/* <!-- Your custom scripts (optional) --> */}
+            <script type="text/javascript" src="js/app.js"></script>
+          </Helmet>
         )
       }}
     />
