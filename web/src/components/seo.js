@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import {StaticQuery, graphql} from 'gatsby'
-import {imageUrlFor} from '../lib/image-url'
-import {buildImageObj} from '../lib/helpers'
+import { StaticQuery, graphql } from 'gatsby'
+import { imageUrlFor } from '../lib/image-url'
+import { buildImageObj } from '../lib/helpers'
 
-function SEO ({description, lang, meta, keywords, title, image}) {
+function SEO({ description, lang, meta, keywords, title, image }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -17,8 +17,8 @@ function SEO ({description, lang, meta, keywords, title, image}) {
 
         return (
           <Helmet
-            
-            htmlAttributes={{lang}}
+
+            htmlAttributes={{ lang }}
             title={title}
             titleTemplate={title === siteTitle ? '%s' : `%s | ${siteTitle}`}
             meta={[
@@ -69,9 +69,21 @@ function SEO ({description, lang, meta, keywords, title, image}) {
               )
               .concat(meta)}
           >
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"></link>
-            {/* <!-- jQuery --> */}
+            
+            {/* <!-- MDB icon --> */}
+            <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+            {/* <!-- Font Awesome --> */}
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+            {/* <!-- Bootstrap core CSS --> */}
+            <link rel="stylesheet" href="css/bootstrap.min.css" />
+            {/* <!-- Material Design Bootstrap --> */}
+            <link rel="stylesheet" href="css/mdb.min.css" />
+            {/* <!-- scrollreveal --> */}
             <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+            {/* <!-- Your custom styles (optional) --> */}
+            <link rel="stylesheet" href="css/style.css" />
+
+            {/* <!-- jQuery --> */}
             <script type="text/javascript" src="js/jquery.min.js"></script>
             {/* <!-- Bootstrap tooltips --> */}
             <script type="text/javascript" src="js/popper.min.js"></script>
@@ -85,6 +97,7 @@ function SEO ({description, lang, meta, keywords, title, image}) {
             <script type="text/javascript" src="js/animatescroll.min.js"></script>
             {/* <!-- Your custom scripts (optional) --> */}
             <script type="text/javascript" src="js/app.js"></script>
+
           </Helmet>
         )
       }}

@@ -45,13 +45,13 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
           {/* <!-- Left --> */}
           <ul className="navbar-nav m-auto menu">
             <li className="nav-item active">
-              <a className="nav-link waves-effect" href="#home">Trang chủ</a>
+              <Link className="nav-link waves-effect" to="/">Trang chủ</Link>
             </li>
             <li className="nav-item">
               <a className="nav-link waves-effect" href="/about.html">Nghĩa</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link waves-effect" href="#blogs">Blogs</a>
+            <Link className="nav-link waves-effect" to="/blogs">Blogs</Link>
             </li>
           </ul>
 
