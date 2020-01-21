@@ -12,19 +12,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        {/* <!-- MDB icon --> */}
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-        {/* <!-- Font Awesome --> */}
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-        {/* <!-- Bootstrap core CSS --> */}
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        {/* <!-- Material Design Bootstrap --> */}
-        <link rel="stylesheet" href="css/mdb.min.css" />
-        {/* <!-- scrollreveal --> */}
-        <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-        {/* <!-- Your custom styles (optional) --> */}
-        <link rel="stylesheet" href="css/style.css" />
-
+        
 
       </head>
       <body {...props.bodyAttributes}>
@@ -40,20 +28,10 @@ export default function HTML(props) {
         {props.postBodyComponents}
 
 
-        {/* <!-- jQuery --> */}
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        {/* <!-- Bootstrap tooltips --> */}
-        <script type="text/javascript" src="js/popper.min.js"></script>
-        {/* <!-- Bootstrap core JavaScript --> */}
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        {/* <!-- MDB core JavaScript --> */}
-        <script type="text/javascript" src="js/mdb.min.js"></script>
-        {/* <!-- mojs lib  --> */}
-        <script type="text/javascript" src="js/mo.min.js"></script>
-        {/* <!-- animate scroll  --> */}
-        <script type="text/javascript" src="js/animatescroll.min.js"></script>
-        {/* <!-- Your custom scripts (optional) --> */}
-        <script type="text/javascript" src="js/app.js"></script>
+        
+{/*         
+        <!-- Your custom scripts (optional) -->
+        <script type="text/javascript" src="js/app.js"></script> */}
       </body>
     </html>
   )
