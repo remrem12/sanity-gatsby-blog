@@ -70,6 +70,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
               .concat(meta)}
           >
 
+            <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
 
             {/* <!-- Font Awesome --> */}
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
@@ -127,13 +128,13 @@ export default SEO
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
-                    site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
-                    title
+              site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
+              title
       description
-                  keywords
+                        keywords
       author {
-                    name
-                  }
-                  }
-                }
-              `
+              name
+            }
+            }
+          }
+        `
