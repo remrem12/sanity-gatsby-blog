@@ -13,11 +13,6 @@ export default function HTML(props) {
         />
         {props.headComponents}
 
-        {/* <!-- JQuery --> */}
-        {/* <script async type="text/javascript" src="../js/jquery.min.js"></script> */}
-        {/* <!-- animate scroll  --> */}
-        {/* <script async type="text/javascript" src="../js/animatescroll.min.js"></script> */}
-
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -32,10 +27,6 @@ export default function HTML(props) {
         {props.postBodyComponents}
 
 
-        
-
-        {/* <!-- Your custom scripts (optional) --> */}
-        {/* <script type="text/javascript" src="js/custom.js"></script> */}
       </body>
     </html>
   )
