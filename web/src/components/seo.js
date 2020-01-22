@@ -103,7 +103,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
             {/* <!-- Your custom scripts (optional) --> */}
             {/* <script async type="text/javascript" src="../js/custom.js"></script> */}
 
-            <script async type="text/javascript" src="../js/all.js"></script>
+            <script type="text/javascript" src="../js/all.js"></script>
           </Helmet>
 
         )
