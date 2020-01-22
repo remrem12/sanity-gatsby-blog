@@ -12,7 +12,11 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        
+
+        {/* <!-- JQuery --> */}
+        {/* <script async type="text/javascript" src="../js/jquery.min.js"></script> */}
+        {/* <!-- animate scroll  --> */}
+        {/* <script async type="text/javascript" src="../js/animatescroll.min.js"></script> */}
 
       </head>
       <body {...props.bodyAttributes}>
@@ -29,9 +33,9 @@ export default function HTML(props) {
 
 
         
-{/*         
-        <!-- Your custom scripts (optional) -->
-        <script type="text/javascript" src="js/app.js"></script> */}
+
+        {/* <!-- Your custom scripts (optional) --> */}
+        {/* <script type="text/javascript" src="js/custom.js"></script> */}
       </body>
     </html>
   )

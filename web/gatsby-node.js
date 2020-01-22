@@ -48,11 +48,7 @@ async function createBlogPostPages (graphql, actions, reporter) {
     })
 }
 
-// createPage({
-//   path: "/blogs",
-//   component: blogs,
-//   context: {},
-// })
+
 
 exports.createPages = async ({graphql, actions, reporter}) => {
   await createBlogPostPages(graphql, actions, reporter)

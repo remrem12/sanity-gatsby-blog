@@ -4,10 +4,10 @@ import Header from './header'
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
-const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
+const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle }) => (
   <>
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav}>
-      <script type="text/javascript" src="js/jquery.min.js"></script>
+  
     </Header>
     <div className={styles.content}>{children}</div>
     <footer className={styles.footer}>
@@ -19,6 +19,9 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
           <a href='https://www.gatsbyjs.org'>Gatsby</a>
         </div>
       </div>
+      {
+        
+      }
     </footer>
   </>
 )

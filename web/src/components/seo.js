@@ -69,36 +69,40 @@ function SEO({ description, lang, meta, keywords, title, image }) {
               )
               .concat(meta)}
           >
-            
-            {/* <!-- MDB icon --> */}
-            <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+
             {/* <!-- Font Awesome --> */}
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
             {/* <!-- Bootstrap core CSS --> */}
-            <link rel="stylesheet" href="css/bootstrap.min.css" />
+            <link href="../css/bootstrap.min.css" rel="stylesheet" />
             {/* <!-- Material Design Bootstrap --> */}
-            <link rel="stylesheet" href="css/mdb.min.css" />
-            {/* <!-- scrollreveal --> */}
-            <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-            {/* <!-- Your custom styles (optional) --> */}
-            <link rel="stylesheet" href="css/style.css" />
+            <link href="../css/mdb.min.css" rel="stylesheet" />
+            {/* <!-- custom css -->*/}
+            <link rel="stylesheet" href="../css/style.css" />
 
-            {/* <!-- jQuery --> */}
-            <script type="text/javascript" src="js/jquery.min.js"></script>
+
+            {/* <!-- JQuery --> */}
+            <script async type="text/javascript" src="../js/jquery.min.js"></script>
             {/* <!-- Bootstrap tooltips --> */}
-            <script type="text/javascript" src="js/popper.min.js"></script>
+            <script async type="text/javascript" src="../js/popper.min.js"></script>
             {/* <!-- Bootstrap core JavaScript --> */}
-            <script type="text/javascript" src="js/bootstrap.min.js"></script>
+            <script async type="text/javascript" src="../js/bootstrap.min.js"></script>
             {/* <!-- MDB core JavaScript --> */}
-            <script type="text/javascript" src="js/mdb.min.js"></script>
-            {/* <!-- mojs lib  --> */}
-            <script type="text/javascript" src="js/mo.min.js"></script>
-            {/* <!-- animate scroll  --> */}
-            <script type="text/javascript" src="js/animatescroll.min.js"></script>
-            {/* <!-- Your custom scripts (optional) --> */}
-            <script type="text/javascript" src="js/app.js"></script>
+            <script async type="text/javascript" src="../js/mdb.min.js"></script>
 
+            {/* <!-- scrollreveal -->  */}
+            <script async src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+            {/* <!-- mojs lib  --> */}
+            <script async type="text/javascript" src="../js/mo.min.js"></script>
+
+            {/* <!-- animate scroll  --> */}
+            <script async type="text/javascript" src="../js/animatescroll.min.js"></script>
+
+            {/* <!-- Your custom scripts (optional) --> */}
+            <script async type="text/javascript" src="../js/custom.js"></script>
           </Helmet>
+
         )
       }}
     />
@@ -123,13 +127,13 @@ export default SEO
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
-    site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
-      title
+                    site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
+                    title
       description
-      keywords
+                  keywords
       author {
-        name
-      }
-    }
-  }
-`
+                    name
+                  }
+                  }
+                }
+              `

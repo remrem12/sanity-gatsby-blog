@@ -6,26 +6,7 @@ import {cn} from '../lib/helpers'
 import styles from './header.module.css'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
-  // <div classNameName={styles.root}>
-  //   <div classNameName={styles.wrapper}>
-  //     <div classNameName={styles.branding}>
-  //       <Link to='/'>{siteTitle}</Link>
-  //     </div>
-
-  //     <button classNameName={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
-  //       <Icon symbol='hamburger' />
-  //     </button>
-
-  //     <nav classNameName={cn(styles.nav, showNav && styles.showNav)}>
-  //       <ul>
-  //         <li>
-  //           <Link to='/archive/'>Blogs</Link>
-  //           <Link to='/abc/'>abc</Link>
-  //         </li>
-  //       </ul>
-  //     </nav>
-  //   </div>
-  // </div>
+  
   <div className="header" id="header">
     {/* <!--Navbar--> */}
     <nav className="navbar navbar-expand-lg navbar-light white">
