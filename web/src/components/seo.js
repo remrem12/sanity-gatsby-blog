@@ -84,26 +84,8 @@ function SEO({ description, lang, meta, keywords, title, image }) {
             {/* <!-- scrollreveal -->  */}
             <script async src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
-            {/* <!-- JQuery --> */}
-            {/* <script async type="text/javascript" src="../js/jquery.min.js"></script> */}
-            {/* <!-- Bootstrap tooltips --> */}
-            {/* <script async type="text/javascript" src="../js/popper.min.js"></script> */}
-            {/* <!-- Bootstrap core JavaScript --> */}
-            {/* <script async type="text/javascript" src="../js/bootstrap.min.js"></script> */}
-            {/* <!-- MDB core JavaScript --> */}
-            {/* <script async type="text/javascript" src="../js/mdb.min.js"></script> */}
 
-
-            {/* <!-- mojs lib  --> */}
-            {/* <script async type="text/javascript" src="../js/mo.min.js"></script> */}
-
-            {/* <!-- animate scroll  --> */}
-            {/* <script async type="text/javascript" src="../js/animatescroll.min.js"></script> */}
-
-            {/* <!-- Your custom scripts (optional) --> */}
-            {/* <script async type="text/javascript" src="../js/custom.js"></script> */}
-
-            <script type="text/javascript" src="../js/all.js"></script>
+            <script async type="text/javascript" src="../js/all.js"></script>
           </Helmet>
 
         )
