@@ -66,7 +66,6 @@ export const query = graphql`
 
 const IndexPage = props => {
   const {data, errors} = props
-
   if (errors) {
     return (
       <Layout>
@@ -99,7 +98,7 @@ const IndexPage = props => {
         <h1 hidden>Welcome to {site.title}</h1>
         {postNodes && (
           <BlogPostPreviewList
-            title='Latest blog posts'
+            title='Bài viết mới nhất'
             nodes={postNodes}
             browseMoreHref='/blogs/'
           />

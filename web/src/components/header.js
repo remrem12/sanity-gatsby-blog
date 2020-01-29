@@ -29,7 +29,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
               <Link className="nav-link waves-effect" to="/">Trang chủ</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link waves-effect" href="/about.html">About</a>
+            <Link className="nav-link waves-effect" to="/about">Nghĩa</Link>
             </li>
             <li className="nav-item">
             <Link className="nav-link waves-effect" to="/blogs">Blogs</Link>
