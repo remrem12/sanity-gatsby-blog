@@ -36,7 +36,6 @@ query lastpostQuery {
     description
     keywords
   }
-
 }
 `
 
