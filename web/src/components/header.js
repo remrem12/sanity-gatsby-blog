@@ -13,9 +13,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
       <div className="container-fluid">
         {/* <Link to='/'>{siteTitle}</Link> */}
         <Link to='/' className='navbar-brand'><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="mdb logo"/></Link>
-        {/* <a className="navbar-brand" href="#">
-          <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="mdb logo"/>
-        </a> */}
+        
         {/* <!-- Collapse button --> */}
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
           aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">

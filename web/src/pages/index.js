@@ -10,6 +10,8 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import ToTop from '../components/to-top'
+import LoginSection from '../components/login-section'
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -95,7 +97,8 @@ const IndexPage = props => {
         keywords={site.keywords}
       />
       <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
+        <ToTop/>
+        <LoginSection/>
         {postNodes && (
           <BlogPostPreviewList
             title='Bài viết mới nhất'

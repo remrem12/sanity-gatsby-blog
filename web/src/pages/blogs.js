@@ -6,6 +6,7 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import ToTop from '../components/to-top'
 
 import {responsiveTitle1} from '../components/typography.module.css'
 
@@ -51,6 +52,7 @@ const ArchivePage = props => {
     <Layout>
       <SEO title='Tất cả' />
       <Container>
+        <ToTop/>
         <h1 className={responsiveTitle1}>Tất cả bài viết</h1>
         {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
       </Container>
