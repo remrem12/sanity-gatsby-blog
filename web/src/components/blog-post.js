@@ -5,13 +5,14 @@ import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
 import Container from './container'
 import AuthorList from './author-list'
-
+import ToTop from './to-top'
 import styles from './blog-post.module.css'
 
 function BlogPost (props) {
   const {_rawBody, authors, categories, title, mainImage, publishedAt} = props
   return (
     <article className={styles.root}>
+      <ToTop/>
       {mainImage && mainImage.asset && (
         <div className={styles.mainImage}>
           <img
@@ -39,7 +40,7 @@ function BlogPost (props) {
                   : format(new Date(publishedAt), 'MMMM Do, YYYY')}
               </div>
             )}
-            {authors && <AuthorList items={authors} title='Authors' />}
+            {authors && <AuthorList items={authors} title='Tác giả' />}
             {categories && (
               <div className={styles.categories}>
                 <h3 className={styles.categoriesHeadline}>Categories</h3>

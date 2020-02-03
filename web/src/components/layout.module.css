@@ -2,7 +2,7 @@
 @import '../styles/custom-properties.css';
 
 .content {
-  padding-top: 4rem;
+  padding-top: 5.2rem;
   background: var(--color-white);
   min-height: calc(100% - 73px - 120px);
 
