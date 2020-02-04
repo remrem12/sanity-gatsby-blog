@@ -83,8 +83,7 @@ jQuery(document).ready(function ($) {
   })
 
   // remove useless div
-  $('.hiddendiv.common').remove();
-  
+//   $('.hiddendiv.common').remove();
 });
 
 
