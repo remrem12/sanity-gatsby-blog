@@ -71,19 +71,6 @@ jQuery(document).ready(function ($) {
 
 
 
-  // change state active in menu
-  let menu = $('.menu');
-  let menuItems = menu[0].querySelectorAll('li');
-  $(menuItems).click(function(){
-      // remove class active
-      menuItems.forEach(item => {
-          $(item).removeClass('active');
-      })
-      $(this).addClass('active');
-  })
-
-  // remove useless div
-//   $('.hiddendiv.common').remove();
 });
 
 
