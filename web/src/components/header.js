@@ -44,6 +44,13 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
             </li>
             
             <li className="nav-item">
+              <a href="mailto:buihuunghia.10hlvc@gmail.com" className="nav-link  waves-effect" target="_blank">
+                <i className="fab fa-google"></i>
+              </a>
+              <div className="text-tooltip"><span>Google</span></div>
+            </li>
+
+            <li className="nav-item">
               <a href="https://twitter.com/home" className="nav-link  waves-effect" target="_blank">
                 <i className="fab fa-twitter"></i>
               </a>

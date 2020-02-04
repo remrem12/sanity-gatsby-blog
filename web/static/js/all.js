@@ -82,7 +82,8 @@ jQuery(document).ready(function ($) {
       $(this).addClass('active');
   })
 
-
+  // remove useless div
+  $('.hiddendiv.common').remove();
   
 });
 
