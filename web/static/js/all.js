@@ -69,7 +69,16 @@ jQuery(document).ready(function ($) {
 //       delay: .5
 //   });
 
-
+  // add color to filter button
+  const colorArr = ['primary', 'default', 'secondary', 'success', 'info', 'warning', 'danger']
+  let buttons = document.querySelectorAll('.filter-group-button div')
+  for(let i = 0; i < buttons.length; i++){
+    let j = i;
+    if(i >= colorArr.length){
+      j = i - colorArr.length
+    }
+    buttons[i].classList.add(`btn-outline-${colorArr[j]}`)
+  }
 
 });
 

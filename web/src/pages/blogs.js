@@ -7,37 +7,43 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import ToTop from '../components/to-top'
+import FilterCate from '../components/filter-cate'
 
 import {responsiveTitle1} from '../components/typography.module.css'
 
 export const query = graphql`
-  query ArchivePageQuery {
-    posts: allSanityPost(
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-      ) {
-      edges {
-        node {
-          id
-          publishedAt
-          mainImage {
-            ...SanityImage
-            alt
-          }
-          title
-          _rawExcerpt
-          slug {
-            current
-          }
+query ArchivePageQuery {
+  posts: allSanityPost(sort: {fields: [publishedAt], order: DESC}, filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}) {
+    edges {
+      node {
+        id
+        publishedAt
+        mainImage {
+          ...SanityImage
+          alt
+        }
+        title
+        _rawExcerpt
+        slug {
+          current
         }
       }
     }
   }
+  cates: allSanityCategory {
+    edges {
+      node {
+        title
+        description
+        id
+      }
+    }
+  }
+}
 `
 
 const ArchivePage = props => {
   const {data, errors} = props
-
   if (errors) {
     return (
       <Layout>
@@ -54,6 +60,7 @@ const ArchivePage = props => {
       <Container>
         <ToTop/>
         <h1 className={responsiveTitle1}>Tất cả bài viết</h1>
+        <FilterCate catesArr = {data.cates.edges}/>
         {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
       </Container>
     </Layout>
