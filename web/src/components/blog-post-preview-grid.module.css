@@ -15,7 +15,7 @@
 }
 
 .grid {
-  margin: 0;
+  /* margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
@@ -32,6 +32,28 @@
 
   @media (--media-min-large) {
     grid-template-columns: 1fr 1fr 1fr;
+  } */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style: none;
+}
+
+.grid li{
+  width: 33%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+@media(max-width: 576px){
+  .grid li{
+      width: 100%;
+  }
+}
+
+@media(min-width: 577px) and (max-width: 768px) {
+   .grid li{
+      width: 50%;
   }
 }
 

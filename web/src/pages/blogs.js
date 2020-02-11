@@ -27,6 +27,9 @@ query ArchivePageQuery {
         slug {
           current
         }
+        categories {
+          title
+        }
       }
     }
   }
@@ -51,9 +54,8 @@ const ArchivePage = props => {
       </Layout>
     )
   }
-
+  
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
-
   return (
     <Layout>
       <SEO title='Tất cả' />
@@ -61,7 +63,7 @@ const ArchivePage = props => {
         <ToTop/>
         <h1 className={responsiveTitle1}>Tất cả bài viết</h1>
         <FilterCate catesArr = {data.cates.edges}/>
-        {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
+        {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes}/>}
       </Container>
     </Layout>
   )
