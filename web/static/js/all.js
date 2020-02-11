@@ -73,20 +73,14 @@ jQuery(document).ready(function ($) {
   })
 
   // reveal when scroll
-//   ScrollReveal().reveal('.home .block', {
-//       reset: false,
-//       distance: '50px',
-//       scale: 0.8,
-//       delay: .5
-//   });
-  console.log('ready')
-  $grid = $('.grid').isotope()
-  $('.filter-group-button .filter-button').click(function(){
-      console.log('click')
-      let filterValue = $(this).attr('data-filter');
-      $grid.isotope({filter: filterValue})
-      return false
-  })
+  ScrollReveal().reveal('.list-post li', {
+      reset: false,
+      distance: '50px',
+      scale: 0.8,
+      delay: .5
+  });
+
+
 
 });
 

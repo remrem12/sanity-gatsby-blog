@@ -66,6 +66,17 @@ export default class FilterCate extends Component {
       })
     }
     
+
+    
+    let iso = new Isotope('.grid', {})
+    for(let i = 0; i < buttons.length; i++){
+      buttons[i].addEventListener('click', function(){
+        let filterValue = this.getAttribute('data-filter')
+        iso.arrange({filter: filterValue})
+      })
+    }
+
+
   }
  
 }
