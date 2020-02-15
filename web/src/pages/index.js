@@ -1,5 +1,5 @@
-import React from 'react'
-import {graphql} from 'gatsby'
+import React, { useState, useEffect } from 'react'
+import { graphql } from 'gatsby'
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
@@ -12,6 +12,8 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import ToTop from '../components/to-top'
 import LoginSection from '../components/login-section'
+import { SolarSystemLoading } from 'react-loadingg'
+
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -67,7 +69,7 @@ export const query = graphql`
 `
 
 const IndexPage = props => {
-  const {data, errors} = props
+  const { data, errors } = props
   if (errors) {
     return (
       <Layout>
@@ -89,26 +91,57 @@ const IndexPage = props => {
     )
   }
 
+  
+  const [isLoading, done] = useState(true)
+  // // // componentdidmount
+  useEffect(() => {
+    if (isLoading) {
+      done(!isLoading)
+    }
+  })
+
   return (
-    <Layout>
-      <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
-      />
-      <Container>
-        <ToTop/>
-        <LoginSection/>
-        {postNodes && (
-          <BlogPostPreviewList
-            title='Bài viết mới nhất'
-            nodes={postNodes}
-            browseMoreHref='/blogs/'
-          />
-        )}
-      </Container>
-    </Layout>
+    <>
+      {isLoading ?
+        <SolarSystemLoading
+          size='large'
+          style={{
+            width: '100%',
+            height: '100%',
+            zIndex: '1000',
+            margin: 'auto',
+            position: 'absolute',
+            left: '0px',
+            right: '0px',
+            top: '0px',
+            bottom: '0px',
+            background: '#fff'
+          }}
+        />
+        : null
+      }
+      <Layout>
+        <SEO
+          title={site.title}
+          description={site.description}
+          keywords={site.keywords}
+        />
+
+        < Container >
+          <ToTop />
+          <LoginSection />
+          {postNodes && (
+            <BlogPostPreviewList
+              title='Bài viết mới nhất'
+              nodes={postNodes}
+              browseMoreHref='/blogs/'
+            />
+          )}
+        </Container>
+      </Layout >
+    </>
   )
+
 }
 
 export default IndexPage

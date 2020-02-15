@@ -72,13 +72,7 @@ jQuery(document).ready(function ($) {
       }
   })
 
-  // reveal when scroll
-  ScrollReveal().reveal('.list-post li', {
-      reset: false,
-      distance: '50px',
-      scale: 0.8,
-      delay: .5
-  });
+
 
 
 

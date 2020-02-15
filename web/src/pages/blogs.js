@@ -8,8 +8,8 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import ToTop from '../components/to-top'
 import FilterCate from '../components/filter-cate'
-
 import {responsiveTitle1} from '../components/typography.module.css'
+
 
 export const query = graphql`
 query ArchivePageQuery {

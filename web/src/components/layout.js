@@ -4,6 +4,7 @@ import Header from './header'
 import '../styles/layout.css'
 import styles from './layout.module.css'
 
+
 const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle, menuState }) => (
   <>
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} menuState = {menuState}>

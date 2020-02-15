@@ -71,19 +71,12 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           >
 
             <link rel="icon" href="../img/favicon.ico" type="image/x-icon"/>
-
             {/* <!-- Font Awesome --> */}
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
             {/* <!-- Bootstrap core CSS --> */}
             <link href="../css/bootstrap.min.css" rel="stylesheet" />
             {/* <!-- Material Design Bootstrap --> */}
             <link href="../css/mdb.min.css" rel="stylesheet" />
-            {/* <!-- custom css -->*/}
-            <link rel="stylesheet" href="../css/style.css" />
-
-            {/* <!-- scrollreveal -->  */}
-            <script async src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
 
             <script async type="text/javascript" src="../js/all.js"></script>
           </Helmet>

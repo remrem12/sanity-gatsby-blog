@@ -38,6 +38,7 @@
     @media (hover: hover) {
       @nest &:hover {
         color: var(--color-accent);
+        
       }
     }
   }

@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -15,6 +16,7 @@ export default function HTML(props) {
 
       </head>
       <body {...props.bodyAttributes}>
+        
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.

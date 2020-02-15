@@ -1,4 +1,5 @@
 import React from 'react'
+import './to-top.css'
 
 const ToTop = () => {
 

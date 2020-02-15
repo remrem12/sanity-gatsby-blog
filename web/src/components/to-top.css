@@ -1,0 +1,22 @@
+/* to top component  */
+.to-top{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    line-height: 4rem;
+    opacity: 0;
+    transition: .3s;
+    cursor: pointer;
+    visibility: hidden;
+    text-align: center;
+  }
+  
+  .to-top.show{
+    opacity: 1;
+    transition: .3s;
+    visibility: visible;
+  }
+  /* end to top component  */

@@ -1,0 +1,26 @@
+@import './typography.module.css';
+
+.info .info-title{
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: .15rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.edu-list li{
+    list-style: none;
+}
+
+.skill-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.skill-list li{
+    list-style: none;
+    width: 70px;
+    height: 70px;
+}

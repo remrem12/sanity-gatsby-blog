@@ -11,7 +11,7 @@ import {responsiveTitle3} from './typography.module.css'
 function BlogPostPreview (props) {
   return (
     <Link
-      className={props.isInList ? styles.inList : styles.inGrid}
+      className={`${props.isInList ? styles.inList : styles.inGrid}`}
       to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
       <div className={styles.leadMediaThumb}>

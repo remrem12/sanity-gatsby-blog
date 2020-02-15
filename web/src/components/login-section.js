@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './login-section.css'
 
 
 const LoginSection = () => {
