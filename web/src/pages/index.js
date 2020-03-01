@@ -10,7 +10,6 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import ToTop from '../components/to-top'
 import LoginSection from '../components/login-section'
 import { SolarSystemLoading } from 'react-loadingg'
 
@@ -128,7 +127,6 @@ const IndexPage = props => {
         />
 
         < Container >
-          <ToTop />
           <LoginSection />
           {postNodes && (
             <BlogPostPreviewList

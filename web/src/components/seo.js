@@ -79,6 +79,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
             <link href="../css/mdb.min.css" rel="stylesheet" />
 
             <script async type="text/javascript" src="../js/all.js"></script>
+            <script async type="text/javascript" src="../js/isotope.js"></script>
           </Helmet>
 
         )

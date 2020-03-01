@@ -6,10 +6,9 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import ToTop from '../components/to-top'
 import FilterCate from '../components/filter-cate'
 import {responsiveTitle1} from '../components/typography.module.css'
-
+// import '../js/isotope.js'
 
 export const query = graphql`
 query ArchivePageQuery {
@@ -60,7 +59,6 @@ const ArchivePage = props => {
     <Layout>
       <SEO title='Tất cả' />
       <Container>
-        <ToTop/>
         <h1 className={responsiveTitle1}>Tất cả bài viết</h1>
         <FilterCate catesArr = {data.cates.edges}/>
         {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes}/>}

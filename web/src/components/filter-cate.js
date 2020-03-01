@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Slug from './Slug'
-
+import Isotope from '../../static/js/isotope'
 
 
 export default class FilterCate extends Component {
@@ -10,16 +10,16 @@ export default class FilterCate extends Component {
     let { catesArr } = this.props
     return (
       <div className='filter-group-button'>
-        <div className = 'filter-button waves-effect btn' data-filter = '*'>Tất cả</div>
+        <div className='filter-button waves-effect btn' data-filter='*'>Tất cả</div>
         {
           catesArr.map(cate => {
-            return (<div className='filter-button waves-effect btn' 
-                      key={cate.node.id}
-                      data-filter = {`.${Slug(cate.node.title)}`}>
-                      {cate.node.title}
-                    </div>)
+            return (<div className='filter-button waves-effect btn'
+              key={cate.node.id}
+              data-filter={`.${Slug(cate.node.title)}`}>
+              {cate.node.title}
+            </div>)
           })
-          
+
         }
       </div>
     )
@@ -39,13 +39,13 @@ export default class FilterCate extends Component {
 
     // click event handler
     for (let i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener('click', function(){
+      buttons[i].addEventListener('click', function () {
 
         // remove active mode (active: no outline  | inactive: outline)
-        for (let j = 0; j < buttons.length; j++){ //  chạy từng button
-          for(let k = 0; k < buttons[j].classList.length; k++){ // chạy từng class của button
-            if(buttons[j].classList[k].indexOf('btn-') != -1 &&
-               buttons[j].classList[k].indexOf('-outline-') == -1){ // class k có outline => active
+        for (let j = 0; j < buttons.length; j++) { //  chạy từng button
+          for (let k = 0; k < buttons[j].classList.length; k++) { // chạy từng class của button
+            if (buttons[j].classList[k].indexOf('btn-') != -1 &&
+              buttons[j].classList[k].indexOf('-outline-') == -1) { // class k có outline => active
               let butClass = buttons[j].classList[k]
               buttons[j].classList.remove(butClass)
               let newButClass = butClass.replace('btn-', 'btn-outline-')
@@ -53,10 +53,10 @@ export default class FilterCate extends Component {
             }
           }
         }
-        
+
         // active clicked button
-        for(let i2 = 0; i2 < this.classList.length; i2++){
-          if(this.classList[i2].indexOf('btn-outline') != -1){
+        for (let i2 = 0; i2 < this.classList.length; i2++) {
+          if (this.classList[i2].indexOf('btn-outline') != -1) {
             let butClass = this.classList[i2]
             this.classList.remove(butClass)
             let newButClass = butClass.replace('btn-outline-', 'btn-')
@@ -65,18 +65,18 @@ export default class FilterCate extends Component {
         }
       })
     }
-    
 
-    
+
     let iso = new Isotope('.grid', {})
-    for(let i = 0; i < buttons.length; i++){
-      buttons[i].addEventListener('click', function(){
-        let filterValue = this.getAttribute('data-filter')
-        iso.arrange({filter: filterValue})
-      })
-    }
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+          let filterValue = this.getAttribute('data-filter')
+          iso.arrange({ filter: filterValue })
+        })
+      }
+
 
 
   }
- 
+
 }

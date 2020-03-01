@@ -49,9 +49,7 @@ const ToTop = () => {
 
       ani1.play();
       ani2.play();
-      ani3.play();
-      $('#header').animatescroll({ easing: 'easeInOutExpo' });
-      
+      ani3.play()
 
   }
   
