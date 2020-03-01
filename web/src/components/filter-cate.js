@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Slug from './Slug'
-import Isotope from '../../static/js/isotope'
 
 
 export default class FilterCate extends Component {
@@ -66,15 +65,13 @@ export default class FilterCate extends Component {
       })
     }
 
-
     let iso = new Isotope('.grid', {})
-      for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function () {
-          let filterValue = this.getAttribute('data-filter')
-          iso.arrange({ filter: filterValue })
-        })
-      }
-
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function () {
+        let filterValue = this.getAttribute('data-filter')
+        iso.arrange({ filter: filterValue })
+      })
+    }
 
 
   }
