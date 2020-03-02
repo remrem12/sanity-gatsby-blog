@@ -1,30 +1,45 @@
 import React, { Component } from 'react'
 import Slug from './Slug'
 
-
 export default class FilterCate extends Component {
 
+  state = {
+    showFilter: false
+  }
+
+  showFilterFunc = () => {
+    this.setState({
+      showFilter: true
+    })
+  }
 
   render() {
     let { catesArr } = this.props
-    return (
-      <div className='filter-group-button'>
-        <div className='filter-button waves-effect btn' data-filter='*'>Tất cả</div>
-        {
-          catesArr.map(cate => {
-            return (<div className='filter-button waves-effect btn'
-              key={cate.node.id}
-              data-filter={`.${Slug(cate.node.title)}`}>
-              {cate.node.title}
-            </div>)
-          })
+    return !this.state.showFilter ?
+      (
+        <div className='filterOption btn' onClick={() => this.showFilterFunc()}>Category Filter</div>
+      )
+      :
+      (
+        <div className='filter-group-button'>
+          <div className='filter-button waves-effect btn' data-filter='*'>Tất cả</div>
+          {
+            catesArr.map(cate => {
+              return (<div className='filter-button waves-effect btn'
+                key={cate.node.id}
+                data-filter={`.${Slug(cate.node.title)}`}>
+                {cate.node.title}
+              </div>)
+            })
 
-        }
-      </div>
-    )
+          }
+        </div>
+      )
   }
 
-  componentDidMount = () => {
+
+
+  componentDidUpdate = () => {
     // add color to filter button
     const colorArr = ['primary', 'default', 'secondary', 'success', 'info', 'warning', 'danger'];
     let buttons = document.querySelectorAll('.filter-group-button div');
@@ -73,7 +88,5 @@ export default class FilterCate extends Component {
       })
     }
 
-
   }
-
 }
