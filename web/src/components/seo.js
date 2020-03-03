@@ -71,7 +71,6 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           >
 
             <link rel="icon" href="../img/favicon.ico" type="image/x-icon"/>
-            <script src = '../js/isotope.js'></script>
           </Helmet>
 
         )

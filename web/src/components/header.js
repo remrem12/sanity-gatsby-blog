@@ -8,7 +8,6 @@ import {
   MDBNavbarToggler,
   MDBCollapse
 } from "mdbreact";
-import { BrowserRouter as Router } from "react-router-dom";
 import {Link} from 'gatsby'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
@@ -25,7 +24,6 @@ class Header extends Component {
 
   render() {
     return (
-      <Router>
         <MDBNavbar color='default-color' fixed='top' transparent light expand="md" className='header'>
           <MDBNavbarBrand>
             <Link to='/'>
@@ -90,7 +88,6 @@ class Header extends Component {
 
           </MDBCollapse>
         </MDBNavbar>
-      </Router>
     );
   }
 }
