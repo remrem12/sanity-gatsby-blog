@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Slug from './Slug'
 
+const Isotope = typeof window !== `undefined` ? require ("./isotope.js") : null
+
+
 export default class FilterCate extends Component {
 
   state = {

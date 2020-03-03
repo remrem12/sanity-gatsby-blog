@@ -4,7 +4,7 @@
 
 
 .content {
-  padding-top: 5.2rem;
+  padding-top: 3.7rem;
   /* min-height: calc(100% - 73px - 120px); */
   transition: .3s;
    @media (--media-min-small) {

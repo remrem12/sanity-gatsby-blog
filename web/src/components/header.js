@@ -1,82 +1,98 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import './header.css'
+import React, { Component } from "react";
+import {
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavLink,
+  MDBNavbarToggler,
+  MDBCollapse
+} from "mdbreact";
+import { BrowserRouter as Router } from "react-router-dom";
+import {Link} from 'gatsby'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+import "./Header.css";
+class Header extends Component {
+  state = {
+    isOpen: false
+  };
 
+  toggleCollapse = () => {
+    this.setState({ isOpen: !this.state.isOpen });
+  };
 
-const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => {
-  
-  return (
-    <div className="header" id="header">
-      {/* <!--Navbar--> */}
-      <nav className="navbar navbar-expand-lg navbar-light white">
-        <div className="container-fluid">
-          {/* <Link to='/'>{siteTitle}</Link> */}
-          <Link to='/' className='navbar-brand'><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="mdb logo" /></Link>
-
-          {/* <!-- Collapse button --> */}
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          {/* <!-- Links --> */}
-          <div className="collapse navbar-collapse" id="basicExampleNav">
-            {/* <!-- Left --> */}
-            <ul className="navbar-nav m-auto menu">
-              <li className="nav-item">
+  render() {
+    return (
+      <Router>
+        <MDBNavbar color='default-color' fixed='top' transparent light expand="md" className='header'>
+          <MDBNavbarBrand>
+            <Link to='/'>
+              <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="mdb logo" />
+            </Link>
+          </MDBNavbarBrand>
+          <MDBNavbarToggler onClick={this.toggleCollapse} />
+          <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+            <MDBNavbarNav left />
+            <MDBNavbarNav left />
+            <MDBNavbarNav left className='menu'>
+              <MDBNavItem>
                 <Link className="nav-link waves-effect" to="/">Trang chủ</Link>
-              </li>
-              <li className="nav-item">
+              </MDBNavItem>
+              <MDBNavItem>
                 <Link className="nav-link waves-effect" to="/about">Nghĩa</Link>
-              </li>
-              <li className="nav-item">
+              </MDBNavItem>
+              <MDBNavItem>
                 <Link className="nav-link waves-effect" to="/blogs">Blogs</Link>
-              </li>
-            </ul>
+              </MDBNavItem>
+            </MDBNavbarNav>
 
-            {/* <!-- Right --> */}
-            <ul className="navbar-nav nav-flex-icons social my-auto">
+            <MDBNavbarNav right className='social'>
               <li className="nav-item">
-                <a href="https://www.facebook.com/hakunonn" className="nav-link  waves-effect" target="_blank">
+                <a href="https://www.facebook.com/hakunonn" rel="noopener noreferrer" className="nav-link  waves-effect" target="_blank">
                   <i className="fab fa-facebook-f"></i>
                 </a>
                 <div className="text-tooltip"><span>Facebook</span></div>
               </li>
 
               <li className="nav-item">
-                <a href="mailto:buihuunghia.10hlvc@gmail.com" className="nav-link  waves-effect" target="_blank">
+                <a href="mailto:buihuunghia.10hlvc@gmail.com" rel="noopener noreferrer" className="nav-link  waves-effect" target="_blank">
                   <i className="fab fa-google"></i>
                 </a>
                 <div className="text-tooltip"><span>Google</span></div>
               </li>
 
               <li className="nav-item">
-                <a href="https://twitter.com/home" className="nav-link  waves-effect" target="_blank">
+                <a href="https://twitter.com/home" rel="noopener noreferrer" className="nav-link  waves-effect" target="_blank">
                   <i className="fab fa-twitter"></i>
                 </a>
                 <div className="text-tooltip"><span>Twitter</span></div>
               </li>
 
               <li className="nav-item">
-                <a href="https://github.com/remrem12" className="nav-link waves-effect" target="_blank">
+                <a href="https://github.com/remrem12" rel="noopener noreferrer" className="nav-link waves-effect" target="_blank">
                   <i className="fab fa-github"></i>
                 </a>
                 <div className="text-tooltip"><span>Github</span></div>
               </li>
 
               <li className="nav-item">
-                <a href="https://www.linkedin.com/in/ngh%C4%A9a-b%C3%B9i-h%E1%BB%AFu-b86004191/" className="nav-link waves-effect" target="_blank">
+                <a href="https://www.linkedin.com/in/ngh%C4%A9a-b%C3%B9i-h%E1%BB%AFu-b86004191/" rel="noopener noreferrer" className="nav-link waves-effect" target="_blank">
                   <i className="fab fa-linkedin"></i>
                 </a>
                 <div className="text-tooltip"><span>LinkedIn</span></div>
               </li>
-            </ul>
 
-          </div>
 
-        </div>
 
-      </nav>
-    </div>
-  )
+            </MDBNavbarNav>
+
+          </MDBCollapse>
+        </MDBNavbar>
+      </Router>
+    );
+  }
 }
-export default Header
+
+export default Header;

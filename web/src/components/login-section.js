@@ -2,9 +2,12 @@ import React from 'react'
 import './login-section.css'
 
 
+
 const LoginSection = () => {
+
   const togglePopup = () => {
-    $('.login-section').toggleClass('show-popup');
+    let showPopupbutton = document.querySelector('.login-section')
+    showPopupbutton.classList.toggle('show-popup')
   }
 
   return (

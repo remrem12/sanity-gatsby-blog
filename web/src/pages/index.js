@@ -92,6 +92,7 @@ const IndexPage = props => {
 
   
   const [isLoading, done] = useState(true)
+  
   // // // componentdidmount
   useEffect(() => {
     if (isLoading) {

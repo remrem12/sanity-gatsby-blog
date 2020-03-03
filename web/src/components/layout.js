@@ -7,7 +7,7 @@ import styles from './layout.module.css'
 import Scrollbar from 'react-smooth-scrollbar';
 import SmoothScrollbar from 'smooth-scrollbar';
 import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll';
-import ToTop from './to-top';
+
 
 SmoothScrollbar.use(OverscrollPlugin);
 
@@ -21,7 +21,7 @@ const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle, menuState 
     <div className='site-layout'>
       <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} menuState={menuState}>
       </Header>
-      <ToTop />
+      {/* <ToTop /> */}
 
       <Scrollbar
         damping={0.12}
