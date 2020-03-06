@@ -20,7 +20,7 @@ export default class FilterCate extends Component {
     let { catesArr } = this.props
     return !this.state.showFilter ?
       (
-        <div className='filterOption btn' onClick={() => this.showFilterFunc()}>Category Filter</div>
+        <div className='filterOption btn' onClick={() => this.showFilterFunc()}>Chủ đề</div>
       )
       :
       (

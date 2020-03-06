@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 import {
   mapEdgesToNodes,
@@ -11,7 +11,6 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import LoginSection from '../components/login-section'
-import { SolarSystemLoading } from 'react-loadingg'
 
 
 export const query = graphql`
@@ -90,55 +89,27 @@ const IndexPage = props => {
     )
   }
 
-  
-  const [isLoading, done] = useState(true)
-  
-  // // // componentdidmount
-  useEffect(() => {
-    if (isLoading) {
-      done(!isLoading)
-    }
-  })
+
 
   return (
-    <>
-      {isLoading ?
-        <SolarSystemLoading
-          size='large'
-          style={{
-            width: '100%',
-            height: '100%',
-            zIndex: '1000',
-            margin: 'auto',
-            position: 'absolute',
-            left: '0px',
-            right: '0px',
-            top: '0px',
-            bottom: '0px',
-            background: '#fff'
-          }}
-        />
-        : null
-      }
-      <Layout>
-        <SEO
-          title={site.title}
-          description={site.description}
-          keywords={site.keywords}
-        />
+    <Layout>
+      <SEO
+        title={site.title}
+        description={site.description}
+        keywords={site.keywords}
+      />
 
-        < Container >
-          <LoginSection />
-          {postNodes && (
-            <BlogPostPreviewList
-              title='Bài viết mới nhất'
-              nodes={postNodes}
-              browseMoreHref='/blogs/'
-            />
-          )}
-        </Container>
-      </Layout >
-    </>
+      < Container >
+        <LoginSection />
+        {postNodes && (
+          <BlogPostPreviewList
+            title='Bài viết mới nhất'
+            nodes={postNodes}
+            browseMoreHref='/blogs/'
+          />
+        )}
+      </Container>
+    </Layout >
   )
 
 }

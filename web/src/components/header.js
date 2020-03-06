@@ -26,8 +26,8 @@ class Header extends Component {
     return (
         <MDBNavbar color='default-color' fixed='top' transparent light expand="md" className='header'>
           <MDBNavbarBrand>
-            <Link to='/'>
-              <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="mdb logo" />
+            <Link to='/' className = 'branch-name'>
+              Blognhamnhi
             </Link>
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
@@ -62,7 +62,7 @@ class Header extends Component {
               </li>
 
               <li className="nav-item">
-                <a href="https://twitter.com/home" rel="noopener noreferrer" className="nav-link  waves-effect" target="_blank">
+                <a href="https://twitter.com/__hei12" rel="noopener noreferrer" className="nav-link  waves-effect" target="_blank">
                   <i className="fab fa-twitter"></i>
                 </a>
                 <div className="text-tooltip"><span>Twitter</span></div>

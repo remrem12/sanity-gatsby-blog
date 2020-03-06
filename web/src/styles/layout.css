@@ -5,7 +5,7 @@ html {
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
   box-sizing: border-box;
-  background: #eaeaea;
+  background: #fff;
 }
 
 body {
@@ -14,5 +14,5 @@ body {
   color: var(--color-black);
   margin: 0;
   overflow: hidden;
-  background: #eaeaea;
+  background: #fff;
 }
