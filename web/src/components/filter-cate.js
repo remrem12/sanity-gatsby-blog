@@ -24,7 +24,7 @@ export default class FilterCate extends Component {
       )
       :
       (
-        <div className='filter-group-button'>
+        <div className='filter-group-button'> 
           <div className='filter-button waves-effect btn' data-filter='*'>Tất cả</div>
           {
             catesArr.map(cate => {
