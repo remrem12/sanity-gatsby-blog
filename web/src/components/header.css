@@ -8,7 +8,7 @@
     transition: all .3s ease;
     background: rgba(255, 255, 255, 0.2) !important;
     width: 100%;
-    z-index: 999;
+    z-index: 1999;
     backdrop-filter: blur(10px);
     box-sizing: border-box;
   }

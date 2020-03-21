@@ -39,10 +39,10 @@ class Header extends Component {
                 <Link className="nav-link waves-effect" to="/">Trang chủ</Link>
               </MDBNavItem>
               <MDBNavItem>
-                <Link className="nav-link waves-effect" to="/about">Nghĩa</Link>
+                <Link className="nav-link waves-effect" to="/blogs">Blogs</Link>
               </MDBNavItem>
               <MDBNavItem>
-                <Link className="nav-link waves-effect" to="/blogs">Blogs</Link>
+                <Link className="nav-link waves-effect" to="/about">Nghĩa</Link>
               </MDBNavItem>
             </MDBNavbarNav>
 

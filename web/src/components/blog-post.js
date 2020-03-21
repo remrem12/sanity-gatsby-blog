@@ -7,6 +7,7 @@ import Container from './container'
 import AuthorList from './author-list'
 import styles from './blog-post.module.css'
 import { SolarSystemLoading } from 'react-loadingg'
+import './blog-post.css'
 
 function BlogPost(props) {
   const { _rawBody, authors, categories, title, mainImage, publishedAt } = props
@@ -43,15 +44,31 @@ function BlogPost(props) {
       <article className={styles.root}>
         {mainImage && mainImage.asset && (
           <div className={styles.mainImage}>
-            <img
-              src={imageUrlFor(buildImageObj(mainImage))
-                .width(1200)
-                .height(Math.floor((9 / 16) * 1200))
-                .fit('crop')
-                .auto('format')
-                .url()}
-              alt={mainImage.alt}
-            />
+            <div className = 'img-layer back'>
+              <img
+                src={imageUrlFor(buildImageObj(mainImage))
+                  // .width(1200)
+                  // .height(Math.floor((9 / 16) * 1200))
+                  .fit('crop')
+                  .auto('format')
+                  .url()}
+                alt={mainImage.alt}
+              />
+            </div>
+            
+            <div className = 'img-layer fore'>
+              <div className = 'blog-img-wrapper'>
+                <img
+                  src={imageUrlFor(buildImageObj(mainImage))
+                    .fit('crop')
+                    .auto('format')
+                    .url()}
+                  alt={mainImage.alt}
+                />
+              </div>
+              
+            </div>
+            
           </div>
         )}
         <Container>
@@ -71,7 +88,7 @@ function BlogPost(props) {
               {authors && <AuthorList items={authors} title='Tác giả' />}
               {categories && (
                 <div className={styles.categories}>
-                  <h3 className={styles.categoriesHeadline}>Categories</h3>
+                  <h3 className={styles.categoriesHeadline}>Chủ đề</h3>
                   <ul>
                     {categories.map(category => (
                       <li key={category._id}>{category.title}</li>
