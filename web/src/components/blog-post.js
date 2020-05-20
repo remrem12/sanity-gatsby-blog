@@ -47,8 +47,6 @@ function BlogPost(props) {
             <div className = 'img-layer back'>
               <img
                 src={imageUrlFor(buildImageObj(mainImage))
-                  // .width(1200)
-                  // .height(Math.floor((9 / 16) * 1200))
                   .fit('crop')
                   .auto('format')
                   .url()}
@@ -73,7 +71,7 @@ function BlogPost(props) {
         )}
         <Container>
           <div className={styles.grid}>
-            <div className={styles.mainContent}>
+            <div className={styles.mainContent} style={{textAlign: 'justify'}}>
               <h1 className={styles.title}>{title}</h1>
               {_rawBody && <PortableText blocks={_rawBody} />}
             </div>

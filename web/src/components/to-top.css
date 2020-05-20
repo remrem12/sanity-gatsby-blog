@@ -1,18 +1,21 @@
 /* to top component  */
 .to-top{
     position: fixed;
-    bottom: 3rem;
-    right: 3rem;
+    bottom: 2rem;
+    right: 2rem;
     width: 4rem;
     height: 4rem;
     font-size: 2rem;
     line-height: 4rem;
-    /* opacity: 0; */
+    border-radius: 50%;
     transition: .3s;
     cursor: pointer;
-    /* visibility: hidden; */
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1000;
+    margin: 0;
+    padding: 0;
   }
   
   .to-top.show{
@@ -20,4 +23,46 @@
     transition: .3s;
     visibility: visible;
   }
+
+
+  .transformbg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .transformbg.transforming{
+    z-index: 1002;
+    opacity: 1;
+    visibility: visible;
+    animation: trans 1s forwards;
+  }
+
+  @keyframes trans {
+    0% {
+      /* background-color: #fff; */
+      opacity: 1;
+      visibility: hidden;
+      backdrop-filter: blur(0);
+    }
+    50%{
+      /* background-color: rgba(0, 0, 0, 0.7); */
+      opacity: 1;
+      visibility: visible;
+      backdrop-filter: blur(30px);
+    }
+    100% {
+      /* background-color: #fff; */
+      opacity: 1;
+      visibility: hidden;
+      backdrop-filter: blur(0);
+    }
+  }
+
+
   /* end to top component  */

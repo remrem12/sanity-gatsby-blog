@@ -89,8 +89,6 @@ const IndexPage = props => {
     )
   }
 
-
-
   return (
     <Layout>
       <SEO
@@ -99,7 +97,7 @@ const IndexPage = props => {
         keywords={site.keywords}
       />
 
-      < Container >
+      <Container >
         <LoginSection />
         {postNodes && (
           <BlogPostPreviewList

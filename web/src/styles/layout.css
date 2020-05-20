@@ -13,6 +13,8 @@ body {
   background: var(--color-white);
   color: var(--color-black);
   margin: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: #fff;
+  scroll-behavior: smooth;
+  transition: .3s;
 }

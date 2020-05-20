@@ -41,8 +41,6 @@
     "jquery": "^3.4.1",
     "mdbreact": "^4.25.3",
     "react-loadingg": "^1.7.1",
-    "react-router-dom": "^5.1.2",
-    "react-smooth-scrollbar": "^8.0.6",
-    "smooth-scrollbar": "^8.5.1"
+    "react-router-dom": "^5.1.2"
   }
 }
